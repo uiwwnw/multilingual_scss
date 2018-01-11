@@ -1,0 +1,10 @@
+@charset "utf-8";
+$lang: "한국";
+
+@function size($size) {
+    @if ($lang == "한국") {
+        @return $size + px;
+    } @else if ($lang == "배트남") {
+        @return floor($size * .9) + px;
+    }
+}
